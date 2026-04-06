@@ -5,20 +5,20 @@
 class Hal < Formula
   desc "HAL - Hashicorp Academy Labs"
   homepage "https://github.com/hashimiche/hal"
-  version "1.0.10"
+  version "1.0.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hashimiche/hal/releases/download/v1.0.10/hal_Darwin_amd64.tar.gz"
-      sha256 "8e570d9337c01ebbc6c18cebee20ff9b6065417097b35db22bb9b97686671200"
+      url "https://github.com/hashimiche/hal/releases/download/v1.0.11/hal_Darwin_amd64.tar.gz"
+      sha256 "0df00e8b20c7bf2640d820fc43a8ef5d38c8ccce1b639fd71b1fdae50e2f05d0"
 
       define_method(:install) do
         bin.install "hal"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hashimiche/hal/releases/download/v1.0.10/hal_Darwin_arm64.tar.gz"
-      sha256 "1dcd7f09520dc3ed4bd4ba75f5d3de9ecf61e5c5cd62801e4e0daf68aa445536"
+      url "https://github.com/hashimiche/hal/releases/download/v1.0.11/hal_Darwin_arm64.tar.gz"
+      sha256 "da902d522a258a3e4e8704135714323161a6b74bd86d0680a936fd7fb4000c8b"
 
       define_method(:install) do
         bin.install "hal"
@@ -28,15 +28,15 @@ class Hal < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hashimiche/hal/releases/download/v1.0.10/hal_Linux_amd64.tar.gz"
-      sha256 "d86351e045274a0761d630e056cab6bff0939ab7cce1253820ff32301f2157ea"
+      url "https://github.com/hashimiche/hal/releases/download/v1.0.11/hal_Linux_amd64.tar.gz"
+      sha256 "b278c605e6fa496480f1790d4081f5ec87efaeb7b46114299debcde21b1bc47a"
       define_method(:install) do
         bin.install "hal"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hashimiche/hal/releases/download/v1.0.10/hal_Linux_arm64.tar.gz"
-      sha256 "af1660490d012b887bbfca711a9f7d4f6994e30e8ffcdb67e6b773e2e644c9f4"
+      url "https://github.com/hashimiche/hal/releases/download/v1.0.11/hal_Linux_arm64.tar.gz"
+      sha256 "c151c03d3fd8689edd89e6a09ec70e6000f4a03b22e40ab6e09861ed7a50f457"
       define_method(:install) do
         bin.install "hal"
       end
